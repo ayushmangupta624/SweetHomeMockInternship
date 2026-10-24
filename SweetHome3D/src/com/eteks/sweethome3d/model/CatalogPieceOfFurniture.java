@@ -609,6 +609,14 @@ public class CatalogPieceOfFurniture implements Comparable<CatalogPieceOfFurnitu
   }
 
   /**
+   * Returns the width of this piece of furniture.
+   */
+  public float getVolume(){
+    return getWidth() * getHeight() * getDepth();
+  }
+
+
+  /**
    * Returns the elevation of this piece of furniture.
    */
   public float getElevation() {
@@ -762,7 +770,7 @@ public class CatalogPieceOfFurniture implements Comparable<CatalogPieceOfFurnitu
   }
   
   /**
-   * Returns the Value Added Tax percentage applied to the price of this piece of furniture. 
+   * Returns the Value Added Tax percentage applied to the price of this piece of furniture.
    */
   public BigDecimal getValueAddedTaxPercentage() {
     return this.valueAddedTaxPercentage;
